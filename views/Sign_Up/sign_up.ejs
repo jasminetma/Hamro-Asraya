@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="..\sign_up\sign_up.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - आश्रय</title>
+  <link rel="stylesheet" href="stylesheets/base.css">
+  <link rel="stylesheet" href="stylesheets/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sumana&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- <div class="auth-container">
+    <div class="auth-image">
+      <img src="/images/signup-illustration.png" alt="Sign up illustration">
+    </div> -->
+    
+    <!-- Right side - Form -->
+    <div class="auth-form-container">
+      Logo
+      <div class="auth-logo">
+        <img src="/images/logo.png" alt="आश्रय Logo">
+      </div>
+      
+      <!-- Form header -->
+      <div class="auth-header">
+        <h1>Sign up</h1>
+        <br>
+        <hr style="border: 0.5px solid gainsboro;"></hr>
+        <p>Let's get you all start up so you can access your personal account.</p>
+      </div>
+      
+      <!-- Sign up form -->
+      <form class="auth-form">
+        <!-- Name fields -->
+        <div class="form-row">
+          <div class="form-group">
+            <label style = "color:#7e22ce;" for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-control" placeholder="first name">
+          </div>
+          
+          <div class="form-group">
+            <label style = "color:#7e22ce;" for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-control" placeholder="last name">
+          </div>
+        </div>
+        
+        <!-- Email field -->
+        <div class="form-group">
+          <label style = "color:#7e22ce;" for="email">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="john.doe@gmail.com">
+        </div>
+        
+        <!-- Phone field -->
+        <div class="form-group">
+          <label style = "color:#7e22ce;" for="phone">Contact Number</label>
+          <input type="tel" id="phone" class="form-control" placeholder="contact number">
+        </div>
+        
+        <!-- Password field -->
+        <div class="form-group">
+          <label style = "color:#7e22ce;" for="password">Password</label>
+          <div class="password-field">
+            <input type="password" id="password" class="form-control" placeholder="password">
+            <button type="button" class="password-toggle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Confirm Password field -->
+        <div class="form-group">
+          <label style = "color:#7e22ce;" for="confirmPassword">Confirm Password</label>
+          <div class="password-field">
+            <input type="password" id="confirmPassword" class="form-control" placeholder="confirm password">
+            <button type="button" class="password-toggle">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Terms checkbox -->
+        <div class="form-check">
+          <input style = "color:#7e22ce;" type="checkbox" id="agreeTerms">
+          <label for="agreeTerms">I agree to all the <a href="#">Terms</a> and <a href="#">Privacy Policies</a></label>
+        </div>
+        
+        <!-- Submit button -->
+        <button type="submit" class="auth-submit">Create account</button>
+      </form>
+      
+      <!-- Login link -->
+      <div class="auth-link">
+        Already have an account? <a href="/log_in">Login</a>
+
+      </div>
+      
+      <!-- Social login -->      
+      <div class="social-divider">Or login with</div>
+      
+      <div class="social-buttons">
+        <button type="button" class="social-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#1877F2">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </button>
+        
+        <button type="button" class="social-button">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </button>
+        
+        <button type="button" class="social-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#000000">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+        </button>
+      </div>
+       
+</body>
+</html>

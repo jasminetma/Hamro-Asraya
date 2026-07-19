@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><span class = "nepali">आश्रय</span>-Find Your Home Away From Home</title>
+  <link rel="stylesheet" href="stylesheets/stylehome.css">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sumana&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <%- include('Home/nav.ejs') %>
+    <!-- Main Content -->
+    <main class = "homebody">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h2 class="brand-name nepali">आश्रय</h2>
+          <h1>Find Your<br>Home Away<br>From Home</h1>
+          <p>Discover trusted, affordable hostels tailored for students — where comfort, service and trust come together.</p>
+          <button class = "signup" onclick = "" >Know More</button>
+        </div>
+        <img id ="girlpic" src = "images/background.png" alt="background">
+      </div>
+      <div>
+        <%- include('Home/filter.ejs') %>
+      </div>
+       
+    </main>
+      <div style="margin-top: 130px;"></div>
+    <%- include('Home/hostel_list.ejs', { hostels: hostels }) %>
+
+    
+    <div style="margin-top: 100px;"></div>
+    <%- include('Home/offers.ejs') %>
+  </div> 
+    <%- include('Home/footer.ejs') %>
+    <script>
+    </script>
+    </body>
+</html>

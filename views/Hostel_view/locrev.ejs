@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/locrev.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+  <!-- Location Map Section -->
+  <div class="location-map">
+    <div class="location-header">
+      <h3 class="location-title">Location Map</h3>
+      <a href="#" class="location-directions">View on Google Maps</a>
+    </div>
+    <div class="map-container">
+      <!-- Replace with your actual Google Maps embed code -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2080248847!2d85.31004531506156!3d27.709862982790663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c1b0033325%3A0x85bea5ef59dc5f99!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1621234567890!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="map-footer">
+      <span>Map data ©2025 Google</span>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reviews-section">
+    <div class="reviews-header">
+      <h2 class="reviews-title">Reviews</h2>
+      <button class="leave-review-btn" onclick="openPopup()">Leave your review</button>
+        <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Send a Message</h3>
+      <form id="messageForm" onsubmit="submitMessage(event)">
+        <textarea name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+        <button type="submit" >Send</button>
+      </form>
+    </div>
+  </div>
+    </div>
+    
+    <div class="rating-summary">
+      <div class="rating-score">4.2</div>
+      <div class="rating-details">
+        <span class="rating-text">Very good</span>
+        <span class="rating-count">45 verified reviews</span>
+      </div>
+    </div>
+    
+<div class="review-list">
+      <!-- Review 1 -->
+     <div class="review-list">
+  <% if (reviews.length === 0) { %>
+    <p>No reviews yet.</p>
+  <% } else { %>
+    <% reviews.forEach(function(review) { %>
+      <div class="review-item">
+        <div class="reviewer-avatar">
+          <img src="<%= review.avatar %>" alt="Reviewer">
+        </div>
+        <div class="review-content">
+          <div class="reviewer-info">
+            <h4 class="reviewer-name"><%= review.reviewerName %></h4>
+            <button class="review-flag">⚑</button>
+          </div>
+          <div class="review-details">
+            <span class="review-rating"><%= review.rating %></span>
+            <span class="review-date"><%= review.date %></span>
+          </div>
+          <p class="review-text"><%= review.text %></p>
+        </div>
+      </div>
+    <% }); %>
+  <% } %>
+</div>
+
+      
+      
+</div>
+  </div>
+</div>
+<script>
+  function openPopup() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  function submitMessage(event) {
+
+    document.getElementById("myModal").style.display = "none";
+    // event.preventDefault();
+    // const message = document.querySelector("textarea[name='message']").value;
+    // const hostelId = window.location.pathname.split("/")[2];
+
+    // fetch(`/hostel/${hostelId}/review`, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ message }),
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   alert(data.message);
+    //   location.reload();
+    // })
+    // .catch(err => {
+    //   console.error("Error submitting review:", err);
+    //   alert("Failed to submit review.");
+    // });
+  }
+</script>
+
+</body>
+</html>
