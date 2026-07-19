@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema({
     default: Date.now
   }
 }, {
-  collection: 'studentUser', // Specify exact collection name
+  collection: 'user', // Specify exact collection name
   timestamps: true
 });
 

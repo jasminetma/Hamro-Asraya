@@ -8,10 +8,19 @@ require("dotenv").config();
 router.get('/', async function(req, res, next) {
   try {
     const hostels = await Hostel.find();
-    res.render('home', { title: 'Express', hostels,
-      activePage: 'home' 
-     });
+
+    console.log("================================");
+    console.log("Hostels found:", hostels.length);
+    console.log(hostels);
+    console.log("================================");
+
+    res.render('home', {
+      title: 'Express',
+      hostels,
+      activePage: 'home'
+    });
   } catch (err) {
+    console.error(err);
     next(err);
   }
 });
@@ -155,13 +164,28 @@ function isAuthenticated(req, res, next) {
 }
 
 // Individual hostel view page with reviews
-router.get('/hostel/:id', async (req, res) => {
-  const hostel = await Hostel.findById(req.params.id);
-  const reviews = await Review.find({ hostelId: hostel.id });
+router.get("/hostel/:id", async (req, res, next) => {
+  try {
+    const hostel = await Hostel.findById(req.params.id);
 
-  res.render('Hostel_view/hostel_view', {user: req.user || null, hostel, reviews ,activePage: 'hostels' });
+    if (!hostel) {
+      return res.status(404).send("Hostel not found");
+    }
+
+    const reviews = await Review.find({
+      hostel: hostel._id,
+    });
+
+    res.render("Hostel_view/hostel_view", {
+      user: req.user || null,
+      hostel,
+      reviews,
+      activePage: "hostels",
+    });
+  } catch (err) {
+    next(err);
+  }
 });
-
 
 
 
